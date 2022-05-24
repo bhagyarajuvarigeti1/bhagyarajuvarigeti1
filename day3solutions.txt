@@ -1,0 +1,107 @@
+1)get user info
+
+$cd /etc/passwd file
+$cat passwdfile | grep userids
+
+
+
+2)move files from one folder to the respective folders
+
+$touch abc.txt cda.txt ghi.txt
+
+$mv abc.txt cda.txt ghi.txt "enter directory"
+
+3)append current date to all log files name which has extension .log.1 from folder
+
+$touch abc.log.1 def.log.1 ghi.log.1 mno.log.1
+$ls 
+$ls -al | awk '{print $7,$8}'
+
+4)archive the files from /var/log folder which have modified 7 days ago and move it to your backup folder
+
+
+5)print last 4 frequently access urls count in sorted orederfrom
+access.log
+
+$cat access.log
+$cat access.log | grep -i http
+$cat access.log | grep -i http | tail -4;
+
+6)print last 4 frequently access urls unique at particular hour from access.log
+$cat access.log
+$cat access.log | grep -i http
+$cat access.log | grep -i http | tail -4;
+ 7)
+
+
+
+ 8)
+
+
+
+
+9)check if a folder exits or not if its no present creat it
+
+$ find filename
+$ mkdid filename
+
+
+10)execute commad "hello and ls and check its executino status print whether command executer successful or not
+
+$hello
+bash: hello: command not found
+$ls
+all the files in the folder
+
+11)set environment user secret ="dH34xJaa23" if its already not exit
+
+$ echo $usersecret
+if not present 
+$ usersecret="dH34xJaa23"
+
+
+12)find ad word "system" from all log files int the folder and print number of occurancemore than 0
+$ cat access.log | grep -i system | wc -l
+ 
+13)create process list table displays process id,parent process id,commad name , % of memory consmption %of cpu utilization
+
+
+
+
+
+
+14)data analysis/manipulation(awk)
+
+$ cat data.csv | awk '$4>10000 {print $2}' 
+b.print only employee name and totalpay
+$ cat data.csv | awk '$4<10000 && {print $2 $7}' 
+
+ii)what is the aggregate Totalpay of employees whose jobtitle is 'captain'
+
+iii)
+$ cat data.csv | awk '/CAPTAIN/ {print $7}' 
+
+iv)
+$ awk '{SUM+=$7} END{print SUM}' data.csv
+
+
+v)
+$ awk '$5<10000 && $5>7000 {print $3}'
+
+
+vi)
+$  awk '$5<10000 && $5>7000 {print $3}' data.csv
+
+
+vii)
+$ awk '{sum+=$4}END{print sum/13}' data.csv
+
+15)find the difference between original file and the updated file and apply changes to the original file
+$ diff -y filename1 filename2 
+
+
+
+
+
+
+
